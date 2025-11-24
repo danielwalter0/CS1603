@@ -1,10 +1,12 @@
 package Week9_Worksheet;
 
+import java.util.Arrays;
+
 public class Week9_Worksheet {
 
 	public static void main(String[] args) {
 		int[] temp = {13, 44, 16, 11};
-		celsiusToFahrenheit(temp);
+		System.out.println(Arrays.toString(celsiusToFahrenheit(temp)));
 
 	}
 	
