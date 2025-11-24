@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Main {
+public class Week7_8_WiseFlow_Mock {
 
 	public static void main(String[] args) {
 	System.out.println(MakeSequence(5));
