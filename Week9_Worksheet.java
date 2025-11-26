@@ -13,6 +13,9 @@ public class Week9_Worksheet {
 		
 		String[] tempInString = {"13", "3", "34", "26"};
 		System.out.println(Arrays.toString(celsiusToFahrenheitInString(tempInString)));
+		
+		String[] tempWithInvalid = {"13", "", "34", "xyz"};
+		System.out.println(Arrays.toString(celsiusToFahrenheitWithValidation(tempWithInvalid)));
 
 	}
 	
@@ -57,6 +60,24 @@ public class Week9_Worksheet {
 		
 		return fahrenheit;
 	}
+	
+	public static double[] celsiusToFahrenheitWithValidation(String[] celsius) {
+	    double[] fahrenheit = new double[celsius.length];
+
+	    for (int i = 0; i < celsius.length; i++) {
+	        try {
+	            int c = Integer.parseInt(celsius[i]); // empty string throws here
+	            fahrenheit[i] = c * 9.0 / 5 + 32;
+	        } catch (NumberFormatException e) {
+	            fahrenheit[i] = 0.0;  // default for invalid or empty input
+	        }
+	    }
+
+	    return fahrenheit;
+	}
+
+	
+	
 	
 	
 
