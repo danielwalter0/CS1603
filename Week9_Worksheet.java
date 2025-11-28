@@ -32,6 +32,12 @@ public class Week9_Worksheet {
 		System.out.println(factorial(5));
 		
 		System.out.println(fib(7));
+		
+		System.out.println(countChar("abracadabra", 'a'));
+		
+		System.out.println(isPal("level"));
+		
+		System.out.println(mcCarthy(50));
 	}
 	
 	public static double[] celsiusToFahrenheit(int[] celsius) {
@@ -181,5 +187,43 @@ public class Week9_Worksheet {
 	}
 	
 	
+	public static int countChar(String str, char ch) {
+		// Base case: empty string
+		if (str.length() == 0) {
+		    return 0;
+		}
+		
+		// Look at the first character
+		int count = (str.charAt(0) == ch) ? 1 : 0;
+		
+		// Recurse on the rest of the string
+		return count + countChar(str.substring(1), ch);
+	}
+	
+	public static boolean isPal(String s)
+    {
+        if(s.length() == 0 || s.length() == 1)
+            // if length =0 OR 1 then it is
+            return true; 
+        if(s.charAt(0) == s.charAt(s.length()-1))
+            // check for first and last char of String:
+            // if they are same then do the same thing for a substring
+            // with first and last char removed. and carry on this
+            // until you string completes or condition fails
+            return isPal(s.substring(1, s.length()-1));
+
+        // if its not the case than string is not.
+        return false;
+    }
+
+	public static int mcCarthy(int x) {
+		if(x > 100) {
+			return x - 10;
+		}
+		else {
+			return mcCarthy(mcCarthy(x+11));
+		}
+		
+	}
 
 }
