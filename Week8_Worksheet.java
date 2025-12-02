@@ -84,6 +84,8 @@ public class Week8_Worksheet {
 		System.out.println(Math.round(x));
 	}
 	
+	//method to see if items in the specified directory are either files or directories 
+	//and filter files based on their file type 
 	public static void fileOrDirectory(String fileType, String dirName) {
 		File dir = new File(dirName);
 		
