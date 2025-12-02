@@ -1,5 +1,3 @@
-package Week9_Worksheet;
-
 import java.util.Arrays;
 
 public class Week9_Worksheet {
