@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -79,11 +77,19 @@ public class Week8_Worksheet {
 		}
 
 		try {
-			writeSqrtTable(5,"Test");
+			writeSqrtTable(64,"Test");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Oops..Error!");
 		}
+		
+		
+		
+		
+		JARExample je = new JARExample();
+		
+		
+		
+		
 	}
 
 	//METHODS
@@ -185,8 +191,8 @@ public class Week8_Worksheet {
 		BufferedWriter bw = new BufferedWriter(file);
 		
 		for(int i=1; i<=n; i++) {
-			String line = i + ": " + Math.sqrt(i) + ": " + Math.sqrt(i) + ": " + Math.sqrt(i);
-			file.write(line);
+			String line = String.format("%d: %.1f %.2f %.3f", i, Math.sqrt(i), Math.sqrt(i), Math.sqrt(i));
+			bw.write(line);
 			bw.newLine();
 		}
 		
